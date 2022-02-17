@@ -23,7 +23,8 @@
     "edge-publish"
   ],
   "files": [
-    "dist/**/*"
+    "dist/**/*",
+    "dist-esm/**/*"
   ],
   "author": "Louis <louis@plasmo.com>",
   "bugs": {
