@@ -1,9 +1,11 @@
 {
   "name": "@plasmo-corp/web-ext-deploy",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "A library for deploying WebExtensions to multiple stores.",
+  "type": "module",
   "main": "./dist/index.js",
   "module": "./dist-esm/index.js",
+  "exports": "./dist-esm/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
@@ -39,7 +41,7 @@
     "prepare": "pnpm run clean && pnpm run build",
     "build": "pnpm run build:esm && pnpm run build:cjs",
     "build:cjs": "tsc --build",
-    "build:esm": "tsc --target ESNext --module ES6 --outDir dist-esm",
+    "build:esm": "tsc --target ESNext --module ES2020 --outDir dist-esm",
     "watch": "tsc --watch",
     "types:check": "tsc --noEmit",
     "format": "prettier --write \"{src,test,examples}/**/*.{ts,tsx}\"",
