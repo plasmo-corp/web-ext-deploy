@@ -1,8 +1,6 @@
 # WebExt Deploy
 
-The ultimate automation tool for deploying to multiple extension stores simultaneously!
-
-Made by [avi12](https://avi12.com)
+This is a fork of the library part of [WebExt Deploy](https://github.com/avi12/web-ext-deploy) by [avi12](https://avi12.com), to be used with [bpp](https://github.com/plasmo-corp/bpp)
 
 Supported stores:
 

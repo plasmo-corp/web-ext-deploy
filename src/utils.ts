@@ -20,7 +20,7 @@ export function getCorrectZip(zip: string): string {
     const packageJson = JSON.parse(fs.readFileSync("package.json").toString());
     return zip.replace("{version}", packageJson.version || "");
   } else {
-    return zip
+    return zip;
   }
 }
 
