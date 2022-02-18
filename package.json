@@ -1,10 +1,8 @@
 {
   "name": "@plasmo-corp/web-ext-deploy",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "A library for deploying WebExtensions to multiple stores.",
   "main": "./dist/index.js",
-  "module": "./dist-esm/index.js",
-  "exports": "./dist-esm/index.js",
   "types": "./dist/index.d.ts",
   "repository": {
     "type": "git",
