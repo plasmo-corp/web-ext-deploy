@@ -9,7 +9,7 @@
     "noUnusedLocals": false,
     "outDir": "./dist",
     "strictNullChecks": false,
-    "module": "NodeNext",
+    "module": "CommonJS",
     "target": "es6",
     "typeRoots": ["./types", "./node_modules/@types"],
     "types": ["node"]

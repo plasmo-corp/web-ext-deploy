@@ -1,4 +1,4 @@
-import ChromeUpload from "chrome-webstore-upload";
+import { chromeWebstoreUpload } from "@plasmo-corp/cwu";
 import fs from "fs";
 import {
   getExtInfo,
@@ -18,7 +18,7 @@ export async function deployToChrome({
   zip
 }: ChromeOptions): Promise<boolean> {
   return new Promise(async (resolve, reject) => {
-    const client = ChromeUpload({
+    const client = chromeWebstoreUpload({
       extensionId,
       clientId,
       clientSecret,
