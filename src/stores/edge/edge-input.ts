@@ -1,5 +1,5 @@
-import { getCorrectZip, getFullPath, getIsFileExists } from "../../utils";
-import { deployToEdge } from "./edge-deploy";
+import { getCorrectZip, getFullPath, getIsFileExists } from "../../utils.js";
+import { deployToEdge } from "./edge-deploy.js";
 
 export class EdgeOptions {
   /** The cookie required to login to the publisher's account, called: `.AspNet.Cookies`<br>
@@ -27,12 +27,18 @@ export class EdgeOptions {
 
   constructor(options) {
     if (!options.extId) {
-      throw new Error(getErrorMessage("No extension ID is provided, e.g. https://partner.microsoft.com/en-us/dashboard/microsoftedge/EXT_ID"));
+      throw new Error(
+        getErrorMessage(
+          "No extension ID is provided, e.g. https://partner.microsoft.com/en-us/dashboard/microsoftedge/EXT_ID"
+        )
+      );
     }
 
     if (!options.cookie) {
-      throw new Error(getErrorMessage(`No cookie is provided. The cookie's name is ".AspNet.Cookies". If you have a hard time obtaining it, run:
-web-ext-deploy --get-cookies=edge`));
+      throw new Error(
+        getErrorMessage(`No cookie is provided. The cookie's name is ".AspNet.Cookies". If you have a hard time obtaining it, run:
+web-ext-deploy --get-cookies=edge`)
+      );
     }
 
     // Zip checking
@@ -45,7 +51,6 @@ web-ext-deploy --get-cookies=edge`));
         getErrorMessage(`Zip doesn't exist: ${getFullPath(options.zip)}`)
       );
     }
-
   }
 }
 
@@ -66,4 +71,3 @@ export async function prepareToDeployEdge(
   new EdgeOptions(options);
   return deployToEdge(options);
 }
-

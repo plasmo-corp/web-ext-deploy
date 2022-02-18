@@ -1,13 +1,13 @@
-import { OperaOptions } from "./opera-input";
 import puppeteer, { Page } from "puppeteer";
-
 import {
   disableImages,
   getExtInfo,
   getFullPath,
   getVerboseMessage,
   logSuccessfullyPublished
-} from "../../utils";
+} from "../../utils.js";
+import { OperaOptions } from "./opera-input.js";
+
 
 const store = "Opera";
 
