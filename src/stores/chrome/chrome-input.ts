@@ -12,8 +12,8 @@ export class ChromeOptions {
   /** The client ID. If you don't have it, use [this guide](https://github.com/DrewML/chrome-webstore-upload/blob/master/How%20to%20generate%20Google%20API%20keys.md) */
   clientId: string;
 
-  /** The client secret. If you don't have it, use [this guide](https://github.com/DrewML/chrome-webstore-upload/blob/master/How%20to%20generate%20Google%20API%20keys.md) */
-  clientSecret: string;
+  /** Optional for v1 api */
+  clientSecret?: string;
 
   /**
    * The path to the ZIP, relative from the current working directory (`process.cwd()`)<br>
@@ -45,14 +45,6 @@ export class ChromeOptions {
       throw new Error(
         getErrorMessage(
           "No client ID is provided. To get one: https://github.com/DrewML/chrome-webstore-upload/blob/master/How%20to%20generate%20Google%20API%20keys.md"
-        )
-      );
-    }
-
-    if (!options.clientSecret) {
-      throw new Error(
-        getErrorMessage(
-          "No client secret is provided. To get one: https://github.com/DrewML/chrome-webstore-upload/blob/master/How%20to%20generate%20Google%20API%20keys.md"
         )
       );
     }

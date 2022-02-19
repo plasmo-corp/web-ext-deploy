@@ -12,8 +12,8 @@ const store = "Chrome";
 export async function deployToChrome({
   extId: extensionId,
   clientId,
-  clientSecret,
   refreshToken,
+  clientSecret,
   verbose,
   zip
 }: ChromeOptions): Promise<boolean> {
@@ -21,8 +21,8 @@ export async function deployToChrome({
     const client = chromeWebstoreUpload({
       extensionId,
       clientId,
-      clientSecret,
-      refreshToken
+      refreshToken,
+      clientSecret
     });
 
     if (verbose) {
